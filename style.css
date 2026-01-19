@@ -1,0 +1,408 @@
+:root{
+    --header-height: 20vh;
+    --sidebar-width: 15vw;
+}
+
+/* 全体のボックスサイズを統一 */
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "BIZ UDGothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    /* 固定ヘッダー分の余白を確保 */
+    padding-top: var(--header-height);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダー（固定、高さを明示） */
+header{
+    display: block;
+    font-family: "BIZ UDGothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    width: 100%;
+    max-width: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: #c0c0c0 solid 2px;
+    height: var(--header-height); /* 追加：高さを明示 */
+}
+
+/* 画像差し替え用ヘッダーセクション */
+#top-header{
+    background-image: url(pic/header/IMG_0617.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
+}
+
+#dohoku-header{
+    background-image: url(pic/header/dohoku.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
+}
+
+/* ヘッダーテキスト */
+#header-text{
+    height: calc(var(--header-height) - 2vh);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
+    paint-order: stroke;
+    font-size: 30pt;
+}
+
+/* 左サイドバー */
+.left-sidebar{
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--header-height));
+    background-color: #b3ceac;
+    border-right: solid 2px #c0c0c0;
+    padding: 10px;
+    overflow: auto;
+    padding-left: 0;
+}
+
+.left-sidebar-contents h4{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 17pt;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.left-sidebar-contents ul li a{
+    display: flex;
+    align-items: center;      /* 垂直中央揃え */
+    justify-content: flex-start;
+    width: 100%;
+    color: #ffffff;
+    background-color: #586455;
+    margin: 8px 0;
+    height: 3rem;             /* ボタンの高さ */
+    padding: 0 16px;          /* 左右の余白 */
+    border-radius: 0 5px 5px 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* ホバーで視認性向上 */
+.left-sidebar-contents ul li a:hover{
+    background-color: #475344;
+    color: #fff;
+}
+
+/* 右サイドバー */
+.right-sidebar{
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--header-height));
+    background-color: #b3ceac; /* 統一 */
+    border-left: solid 2px #c0c0c0;
+    padding: 10px;
+    overflow: auto;
+    padding-right: 0;
+}
+
+.right-sidebar-contents h4{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 17pt;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.right-sidebar-contents ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    color: #ffffff;
+    background-color: #586455;
+    margin: 8px 0;
+    height: 3rem;
+    padding: 0 16px;
+    border-radius: 5px 0 0 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* メインコンテンツ：サイドバー分の余白を確保しつつ中央寄せしない */
+.main-contents{
+    position: relative;
+    margin-top: 0;
+    margin-left: calc(var(--sidebar-width) + 20px);
+    margin-right: calc(var(--sidebar-width) + 20px);
+    padding: 20px;
+    min-height: calc(100vh - var(--header-height));
+    max-width: calc(100vw - (var(--sidebar-width) * 2) - 40px);
+    /* 中央揃えは不適切だったので削除（以前の margin:0 auto を撤去） */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* コンテンツ幅を確保 */
+    justify-content: flex-start;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.topic{
+    width:40vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    border: black solid 1px;
+}
+
+.new-cars{
+    text-align: center;
+    font-size: 12pt;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.new-cars-top{
+    text-align: left;
+    font-size: 10pt;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    width: 80%;
+    border: #586455 solid 2px;
+    padding: 10px;
+}
+
+.new-cars-pic{
+    width:60%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    border-radius: 3px;
+}
+
+/* 車両動向セクション */
+.vehicle-news {
+    margin-top: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+}
+
+.vehicle-news h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 3px solid #e60012;
+    padding-bottom: 10px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news-category h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.news-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.news-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.news-item a {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+.news-item img {
+    width: 100px;
+    height: 80px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.news-content {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.news-content h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.news-item.top .news-content h4 {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* ベストショットコンテナ */
+.best-shot-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ベストショットカード */
+.best-shot-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
+}
+
+.best-shot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+    border-color: #586455;
+}
+
+/* 画像ラッパー */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #586455 0%, #b3ceac 50%, #586455 100%);
+}
+
+/* ベストショット画像 */
+.bestshot {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.bestshot:hover {
+    transform: scale(1.02);
+}
+
+/* 写真情報セクション */
+.photo-info {
+    padding: 30px;
+    background: #ffffff;
+}
+
+/* 写真タイトル */
+.photo-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 15px 0;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #b3ceac;
+    display: inline-block;
+}
+
+/* 写真キャプション */
+.photo-caption {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+    text-align: left;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .best-shot-container {
+        padding: 10px;
+    }
+    
+    .image-wrapper {
+        padding: 15px;
+    }
+    
+    .photo-info {
+        padding: 20px;
+    }
+    
+    .photo-title {
+        font-size: 1.2rem;
+    }
+    
+    .photo-caption {
+        font-size: 0.9rem;
+    }
+}
