@@ -603,3 +603,10 @@ header{
     background-position: center;
     height: var(--header-height);
 }
+
+#a230a306-header{
+    background-image: url(pic/cars/a230a306.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
+}
