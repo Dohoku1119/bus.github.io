@@ -173,10 +173,17 @@ header{
     /* 中央揃えは不適切だったので削除（以前の margin:0 auto を撤去） */
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* コンテンツ幅を確保 */
+    align-items: center; /* 画像を中央に配置 */
     justify-content: flex-start;
     gap: 1rem;
     box-sizing: border-box;
+}
+
+.vehicle-news img{
+    width:60%;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
 }
 
 .topic{
@@ -239,8 +246,14 @@ header{
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .news-category h3 {
@@ -405,4 +418,188 @@ header{
     .photo-caption {
         font-size: 0.9rem;
     }
+}
+
+/* 車両スペック表 */
+.vehicle-specs {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.vehicle-specs th {
+    background-color: #586455;
+    color: white;
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 700;
+    width: 35%;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.vehicle-specs td {
+    padding: 15px 20px;
+    background-color: #ffffff;
+    color: #333;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.vehicle-specs tr:last-child th,
+.vehicle-specs tr:last-child td {
+    border-bottom: none;
+}
+
+.vehicle-specs tr:hover td {
+    background-color: #f8f9fa;
+}
+
+.gaiyou{
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.gaiyou h3{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.gaiyou p{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* 更新ニュースセクション */
+.koushin-news {
+    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+    width: 100%;
+}
+
+.koushin-news h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 3px solid #586455;
+    padding-bottom: 10px;
+}
+
+/* 更新履歴コンテナ */
+.update-history-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 更新履歴カード */
+.update-history-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
+}
+
+.update-history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+    border-color: #586455;
+}
+
+/* 更新日ヘッダー */
+.update-header {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    padding: 15px 20px;
+}
+
+.update-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #586455 0%, #b3ceac 50%, #586455 100%);
+}
+
+.update-date {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #586455;
+    padding: 5px 15px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 更新内容セクション */
+.update-content {
+    padding: 30px;
+    background: #ffffff;
+}
+
+/* 更新タイトル */
+.update-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 15px 0;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #b3ceac;
+    display: inline-block;
+}
+
+/* 更新説明 */
+.update-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+    text-align: left;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .update-history-container {
+        padding: 10px;
+    }
+    
+    .update-content {
+        padding: 20px;
+    }
+    
+    .update-title {
+        font-size: 1.2rem;
+    }
+    
+    .update-description {
+        font-size: 0.9rem;
+    }
+}
+
+#a230k81-header{
+    background-image: url(pic/cars/a230k81.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
 }
