@@ -610,3 +610,10 @@ header{
     background-position: center;
     height: var(--header-height);
 }
+
+#a200k1413-header{
+    background-image: url(pic/cars/a200k1413.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
+}
