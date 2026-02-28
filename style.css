@@ -617,3 +617,45 @@ header{
     background-position: center;
     height: var(--header-height);
 }
+
+#a200k590-header{
+    background-image: url(pic/cars/a200k590.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
+}
+
+#a200k796-header{
+    background-image: url(pic/cars/a200k796.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
+}
+
+#a200k850-header{
+    background-image: url(pic/cars/a200k850.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
+}
+
+#a200k847-header{
+    background-image: url(pic/cars/a200k847.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
+}
+
+#a200k1230-header{
+    background-image: url(pic/cars/a200k1230.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
+}
+
+#a200k1231-header{
+    background-image: url(pic/cars/a200k1231.JPG);
+    background-size: cover;
+    background-position: center;
+    height: var(--header-height);
+}
