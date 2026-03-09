@@ -383,6 +383,12 @@ header {
 #a230k81-header { background-image: url(pic/cars/a230k81.JPG); }
 #a230a306-header { background-image: url(pic/cars/a230a306.JPG); }
 #a200k1413-header { background-image: url(pic/cars/a200k1413.JPG); }
+#a200k590-header { background-image: url(pic/cars/a200k590.JPG); }
+#a200k796-header { background-image: url(pic/cars/a200k796.JPG); }
+#a200k850-header { background-image: url(pic/cars/a200k850.JPG); }
+#a200k847-header { background-image: url(pic/cars/a200k847.JPG); }
+#a200k1230-header { background-image: url(pic/cars/a200k1230.JPG); }
+#a200k1231-header { background-image: url(pic/cars/a200k1231.JPG); }
 /* ...必要に応じて追加... */
 
 /* 車両個別ページ用レイアウト */
@@ -405,6 +411,20 @@ header {
     grid-template-columns: 2fr 1fr;
     gap: 20px;
     margin-top: 20px;
+}
+
+.carpic{
+    width: 60%;
+    height: auto;
+    border-radius: 8px;
+    display: flex;
+    margin:0 auto;
+}
+
+.gaiyou{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 @media (max-width: 900px) {
