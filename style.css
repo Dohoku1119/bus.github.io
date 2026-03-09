@@ -298,7 +298,7 @@ header {
     padding: 15px 20px;
     text-align: left;
     font-weight: 700;
-    width: 35%;
+    width: 25%;
     border-bottom: 2px solid #dee2e6;
 }
 
@@ -355,7 +355,7 @@ header {
 /* 車両個別ヘッダー背景用 */
 #a230k81-header, #a230a306-header, #a200k1413-header, #a200k590-header, 
 #a200k796-header, #a200k850-header, #a200k847-header, #a200k1230-header, 
-#a200k1231-header {
+#a200k1231-header,#martop-header {
     background-size: cover;
     background-position: center;
     height: var(--header-height);
@@ -379,7 +379,7 @@ header {
     color: #333;
 }
 
-
+#martop-header { background-image: url(pic/2026.3_top/IMG_0059.JPG); }
 #a230k81-header { background-image: url(pic/cars/a230k81.JPG); }
 #a230a306-header { background-image: url(pic/cars/a230a306.JPG); }
 #a200k1413-header { background-image: url(pic/cars/a200k1413.JPG); }
@@ -425,6 +425,7 @@ header {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    margin:0 auto;    
 }
 
 @media (max-width: 900px) {
