@@ -309,6 +309,42 @@ header {
     border-bottom: 1px solid #dee2e6;
 }
 
+/* 道北バス車両一覧表 */
+.dohoku-allcars {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    margin-top: 20px;
+}
+
+.dohoku-allcars th,
+.dohoku-allcars td {
+    border: 1px solid #cfd4d9;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.dohoku-allcars th:nth-child(2),
+.dohoku-allcars td:nth-child(2) {
+    width: 150px;
+    padding: 0;
+}
+
+.dohoku-allcars th {
+    background-color: #586455;
+    color: #ffffff;
+}
+
+.car-table-image {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0;
+}
+
 /* 更新ニュースセクション */
 .koushin-news {
     margin-top: 40px;
@@ -355,7 +391,7 @@ header {
 /* 車両個別ヘッダー背景用 */
 #a230k81-header, #a230a306-header, #a200k1413-header, #a200k590-header, 
 #a200k796-header, #a200k850-header, #a200k847-header, #a200k1230-header, 
-#a200k1231-header,#martop-header {
+#a200k1231-header,#martop-header, #asaden-header {
     background-size: cover;
     background-position: center;
     height: var(--header-height);
@@ -389,6 +425,7 @@ header {
 #a200k847-header { background-image: url(pic/cars/a200k847.JPG); }
 #a200k1230-header { background-image: url(pic/cars/a200k1230.JPG); }
 #a200k1231-header { background-image: url(pic/cars/a200k1231.JPG); }
+#asaden-header { background-image: url(pic/header/DSC_0001_BURST20251024162604051_COVER.JPG); }
 /* ...必要に応じて追加... */
 
 /* 車両個別ページ用レイアウト */
