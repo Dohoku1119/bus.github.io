@@ -309,6 +309,74 @@ header {
     border-bottom: 1px solid #dee2e6;
 }
 
+/* 道北バス車両一覧表 */
+.cars-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #d7e0d5;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dohoku-allcars {
+    width: 100%;
+    min-width: 860px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.dohoku-allcars th,
+.dohoku-allcars td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e8ece8;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.dohoku-allcars th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, #5f705b 0%, #4c5c49 100%);
+    color: #ffffff;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+.dohoku-allcars tr:nth-child(even) td {
+    background-color: #f7faf7;
+}
+
+.dohoku-allcars tr:hover td {
+    background-color: #ecf4ea;
+}
+
+.dohoku-allcars td:first-child {
+    font-weight: 700;
+    color: #3a4a37;
+}
+
+.dohoku-allcars td:nth-child(3) a {
+    color: #2d5f96;
+    font-weight: 700;
+}
+
+.dohoku-allcars td:nth-child(3) a:hover {
+    color: #1d3f66;
+    text-decoration: underline;
+}
+
+.car-table-image {
+    width: 108px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #d0d8cf;
+    display: block;
+}
+
 /* 更新ニュースセクション */
 .koushin-news {
     margin-top: 40px;
@@ -433,5 +501,20 @@ header {
 @media (max-width: 900px) {
     .vehicle-content {
         grid-template-columns: 1fr;
+    }
+
+    .main-contents {
+        margin-left: 12px;
+        margin-right: 12px;
+        max-width: calc(100vw - 24px);
+        padding: 12px;
+    }
+
+    .cars-table-wrap {
+        border-radius: 10px;
+    }
+
+    .dohoku-allcars {
+        min-width: 760px;
     }
 }
